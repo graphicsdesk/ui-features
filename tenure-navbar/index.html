@@ -1,14 +1,14 @@
 <link rel="stylesheet" type="text/css" href="main.css">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:600|Roboto:400" rel="stylesheet">
 
-<div>
-    <div id="expand-btn">
+<div id="nav-container">
+    <button id="expand-btn" onclick="toggleNav()">
         <svg viewBox="0 0 32 32" viewBox="0 0 32 32" aria-hidden="true">
             <path d="M16.002 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/>
         </svg>
-    </div>
+    </button>
     <div id="navbar">
-        <a href="http://columbiaspectator.com" id="logo">
+        <a href="http://columbiaspectator.com" id="logo" class="noselect">
             <img src="./spectator-logo.png" alt="Columbia Spectator" />
         </a>
         <div class="part" id="intro">
@@ -29,8 +29,32 @@
     </div>
 </div>
 
+<div style="background-color:#fff;height:300vh"></div>
+
 <script>
- // replace this with b
+ /* Toggles mobile navbar */
+
+ const chev = document.getElementById('expand-btn');
+ const nav = document.getElementById('navbar');
+ let isVisible = false;
+
+ function toggleNav() {
+     if (isVisible) {
+         chev.className = 'rotate-down';
+         nav.className = 'roll-up';
+     } else {
+         chev.className = 'rotate-up';
+         nav.className = 'roll-down';
+     }
+     isVisible = !isVisible;
+ }
+
+</script>
+
+<script>
+ /* Highlights the correct part header on the correct page */
+
+ // TODO: replace this with actual phrases
  const keyPhrases = {
      // phrase: id
      'ui-features/tenure-navbar': 'part1', // for local dev
