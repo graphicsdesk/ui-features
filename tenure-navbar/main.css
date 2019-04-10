@@ -69,4 +69,5 @@ body {
 
 #navbar > div#takeaways > a {
   color: #999999;
+  text-align: left;
 }
