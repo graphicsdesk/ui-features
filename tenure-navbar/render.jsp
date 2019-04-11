@@ -13,7 +13,7 @@
     </button>
     <div id="navbar">
         <a href="http://columbiaspectator.com" id="logo" class="noselect">
-            <img src="./spectator-logo.png" alt="Columbia Spectator" />
+            <img src="https://s3.amazonaws.com/spec-imagehosting/spectator-logo.png" alt="spectator-logo" />
         </a>
         <div class="part" id="intro">
             <a href="#">Intro</a>
