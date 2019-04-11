@@ -1,9 +1,8 @@
-<link rel="stylesheet" type="text/css" href="style.css">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:600|Roboto:400" rel="stylesheet">
 
 <div id="nav-container">
     <button id="expand-btn" onclick="toggleNav()">
-        <svg viewBox="0 0 32 32" viewBox="0 0 32 32" aria-hidden="true">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
             <path d="M16.002 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/>
         </svg>
     </button>
@@ -18,19 +17,16 @@
             <a href="#">Part 1: First Line of Defense</a>
         </div>
         <div class="part" id="part2">
-            <a href="#">Part 2: Foregoing Formalities</a>
+            <a href="#">Part 2: Side-stepping the system</a>
         </div>
         <div class="part" id="part3">
             <a href="#">Part 3: Breaking the black box</a>
         </div>
         <div id="takeaways">
-            <a href="#">6 Takeaways From The Times Investigation into Rupert Murdoch and His Family</a>
+            <a href="#">6 Takeaways From Spectator's Investigation into faculty sexual misconduct</a>
         </div>
     </div>
 </div>
-
-<!-- JUST FOR `POSITION: FIXED` DEMO PURPOSES; DO NOT FORGET TO REMOVE THIS -->
-<div style="background-color:#fff;height:300vh"></div>
 
 <script>
  /* Toggles mobile navbar */
@@ -49,16 +45,10 @@
      }
      isVisible = !isVisible;
  }
-
-</script>
-
-<script>
  /* Highlights the correct part header on the correct page */
 
  // TODO: replace this with actual phrases
  const keyPhrases = {
-     // phrase: id
-     'ui-features/tenure-navbar': 'part1', // for local dev
      'part1': 'part1',
      'part2': 'part2',
      'part3': 'part3',
@@ -71,3 +61,287 @@
      }
  }
 </script>
+
+
+<style>
+ div.row.tli-wrapper {
+     margin-left: 0;
+     margin-right: 0;
+ }
+ div.photo-nav,
+ div.photo-nav-wrapper {
+     display: none !important;
+ }
+
+#nav-container {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+}
+
+#expand-btn {
+    display: none;
+
+    /* remove default button styles */
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+#navbar {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+    -webkit-box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.3);
+            box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.3);
+    background-color: #ffffff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 17px;
+}
+
+#navbar > a#logo {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 52px;
+    min-height: 52px;
+    padding: 17px 0;
+    margin-right: 40px; /* not scaleable */
+}
+
+#navbar > a#logo img {
+    position: relative;
+    bottom: 1px;
+    height: 18px; /* 52 - 2 * 17 */
+}
+
+#navbar > div {
+    height: 52px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid transparent;
+}
+
+#navbar > div:hover {
+    cursor: pointer;
+}
+
+#navbar > div > a {
+    text-align: center;
+    color: #121212;
+    text-decoration: none;
+}
+
+#navbar > div.part {
+    margin-right: 45px;
+    -webkit-transition-duration: .3s;
+         -o-transition-duration: .3s;
+            transition-duration: .3s;
+}
+
+#navbar > div.highlighted,
+#navbar > div.part:hover {
+    border-bottom: 3px solid #5171ad;
+}
+
+#navbar > div.part > a {
+    text-transform: uppercase;
+    font-family: Open Sans;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+#navbar > div#takeaways {
+    min-width: 258px; /* EXACT VALUE BASED ON TEXT */
+    max-width: 260px; /* More flexible value */
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.38;
+}
+
+#navbar > div#takeaways > a {
+    color: #999;
+    text-align: left;
+}
+
+/* After first foldpoint, equivalent to evenly spacing everything  */
+@media (max-width: 1365px) {
+    #navbar {
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+    }
+
+    #navbar > div.part,
+    #navbar > a#logo {
+        margin-right: 25px;
+    }
+}
+
+/* Second foldpoint, when headers wrap to 3 lines */
+@media (max-width: 1034px) {
+    #navbar {
+        overflow-y: hidden;
+        max-height: 52px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+    }
+
+    #navbar > div.part,
+    #navbar > a#logo {
+        margin-right: 0;
+    }
+
+    #navbar > div {
+        min-height: 42px;
+        height: 42px;
+    }
+
+    #navbar > div#takeaways {
+        margin-bottom: 17px;
+    }
+    #navbar > div#takeaways > a {
+        text-align: center;
+    }
+
+    #expand-btn {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        width: 52px;
+        height: 52px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    #expand-btn:hover {
+        cursor: pointer;
+    }
+
+    #expand-btn > svg {
+        width: 35px;
+    }
+
+    #expand-btn > svg > path {
+        fill: #444;
+    }
+}
+
+#expand-btn, #navbar {
+    -webkit-animation-duration: .3s;
+            animation-duration: .3s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes rotateDown {
+    from { -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+    to { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+}
+
+@keyframes rotateDown {
+    from { -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+    to { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+}
+
+@-webkit-keyframes rotateUp {
+    from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+    to { -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+}
+
+@keyframes rotateUp {
+    from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+    to { -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+}
+
+.rotate-down {
+    -webkit-animation-name: rotateDown;
+            animation-name: rotateDown;
+}
+
+.rotate-up {
+    -webkit-animation-name: rotateUp;
+            animation-name: rotateUp;
+}
+
+@-webkit-keyframes rollUp {
+    from { max-height: 312px; }
+    to { max-height: 52px; }
+}
+
+@keyframes rollUp {
+    from { max-height: 312px; }
+    to { max-height: 52px; }
+}
+
+@-webkit-keyframes rollDown {
+    from { max-height: 52px; }
+    to { max-height: 312px; }
+}
+
+@keyframes rollDown {
+    from { max-height: 52px; }
+    to { max-height: 312px; }
+}
+
+.roll-up {
+    -webkit-animation-name: rollUp;
+            animation-name: rollUp;
+}
+
+.roll-down {
+    -webkit-animation-name: rollDown;
+            animation-name: rollDown;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */ /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+</style>
