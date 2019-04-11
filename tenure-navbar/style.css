@@ -28,7 +28,6 @@ body {
     display: flex;
     align-items: center;
     padding: 0 17px;
-
 }
 
 #navbar > a#logo {
@@ -36,7 +35,7 @@ body {
     display: block;
     height: 52px;
     padding: 17px 0;
-    margin-right: 47px; /* not scaleable */
+    margin-right: 40px; /* not scaleable */
 }
 
 #navbar > a#logo img {
@@ -66,7 +65,7 @@ body {
 }
 
 #navbar > div.part {
-    margin-right: 55px;
+    margin-right: 45px;
     transition-duration: .3s;
 }
 
@@ -97,19 +96,19 @@ body {
 }
 
 /* After first foldpoint, equivalent to evenly spacing everything  */
-@media (max-width: 1331px) {
+@media (max-width: 1354px) {
     #navbar {
         justify-content: space-between;
     }
 
     #navbar > div.part,
     #navbar > a#logo {
-        margin-right: 30px;
+        margin-right: 25px;
     }
 }
 
 /* Second foldpoint, when headers wrap to 3 lines */
-@media (max-width: 962px) {
+@media (max-width: 1001px) {
     #navbar {
         overflow-y: hidden;
         max-height: 52px;
