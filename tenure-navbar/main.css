@@ -97,7 +97,7 @@ body {
 }
 
 /* After first foldpoint, equivalent to evenly spacing everything  */
-@media (max-width: 1181px) {
+@media (max-width: 1331px) {
     #navbar {
         justify-content: space-between;
     }
@@ -109,7 +109,7 @@ body {
 }
 
 /* Second foldpoint, when headers wrap to 3 lines */
-@media (max-width: 895px) {
+@media (max-width: 962px) {
     #navbar {
         overflow-y: hidden;
         max-height: 52px;
