@@ -1,3 +1,5 @@
+This is a collection of components commonly used by interactives or news features. It is _not_ intended to be a general purpose component library.
+
 # Components
 
 | Folder | Description | Article(s) |
