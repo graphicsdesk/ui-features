@@ -1,12 +1,12 @@
 This is a collection of components commonly used by interactives or news features. It is _not_ intended to be a general purpose component library.
 
-# Components
+## Components
 
 | Folder | Description | Article(s) |
 |--------|-------------|------------|
 | `parts-navbar` | A navbar for news features with several parts. | [🔗](https://www.columbiaspectator.com/news-features/2019/04/11/up-against-the-invincible-a-professor-was-convicted-of-sexual-misconduct-why-is-he-still-on-campus-2/) | 
 
-# Useful links
+## Useful links
 
 [Ellipsis](https://spectator.arcpublishing.com/ellipsis)
 
@@ -14,6 +14,8 @@ This is a collection of components commonly used by interactives or news feature
 
 [Kevin's PageBuilder fork](https://github.com/kevinl94303/Spectator-PageBuilder-Features)
 
-# How to deploy an interactive on PageBuilder
+## Before deploying an interactive on PageBuilder
 
-Add an id to whatever sticky figures exist, then give them the CSS rules `position: sticky;` and `position: -webkit-sticky;` in `render.jsp`.
+* Add an id to whatever sticky figures exist, then give them the CSS rules `position: sticky;` and `position: -webkit-sticky;` in `render.jsp`.
+
+* If a `transform: translate3d(0, 0, 0)` is needed for the sticky element, don't forget to add an equivalent `WebkitTransform` property.
