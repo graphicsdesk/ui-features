@@ -13,3 +13,7 @@ This is a collection of components commonly used by interactives or news feature
 [PageBuilder](https://spectator.arcpublishing.com/pb/admin/app/browse/pages.html)
 
 [Kevin's PageBuilder fork](https://github.com/kevinl94303/Spectator-PageBuilder-Features)
+
+# How to deploy an interactive on PageBuilder
+
+Add an id to whatever sticky figures exist, then give them the CSS rules `position: sticky;` and `position: -webkit-sticky;` in `render.jsp`.
