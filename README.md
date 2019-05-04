@@ -16,6 +16,8 @@ This is a collection of components commonly used by interactives or news feature
 
 ## Before deploying an interactive on PageBuilder
 
-* Add an id to whatever sticky figures exist, then give them the CSS rules `position: sticky;` and `position: -webkit-sticky;` in `render.jsp`.
+* Remember `IntersectionObserver` and `position: sticky` polyfills.
 
-* If a `transform: translate3d(0, 0, 0)` is needed for the sticky element, don't forget to add an equivalent `WebkitTransform` property.
+* If a `transform: translate3d(0, 0, 0)` is needed for the sticky element, don't forget to add the webkit equivalent, `WebkitTransform`.
+
+* Remember the Spec navbars.
