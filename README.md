@@ -4,7 +4,8 @@ This is a collection of components commonly used by interactives or news feature
 
 | Folder | Description | Article(s) |
 |--------|-------------|------------|
-| `parts-navbar` | A navbar for news features with several parts. | [🔗](https://www.columbiaspectator.com/news-features/2019/04/11/up-against-the-invincible-a-professor-was-convicted-of-sexual-misconduct-why-is-he-still-on-campus-2/) | 
+| `navbar-parts` | A navbar for news features with several parts. | [🔗](https://www.columbiaspectator.com/news-features/2019/04/11/up-against-the-invincible-a-professor-was-convicted-of-sexual-misconduct-why-is-he-still-on-campus-2/) | 
+| `eye-navbar` | Just a prettier navbar for Eye articles. | |
 
 ## Useful links
 
