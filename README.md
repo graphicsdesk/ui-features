@@ -1,4 +1,4 @@
-This is a collection of components commonly used by interactives or news features. It is _not_ intended to be a general purpose component library.
+This is a collection of simple HTML and CSS components to be reused in Ellipsis. It is _not_ intended to be a general purpose component library.
 
 ## Components
 
